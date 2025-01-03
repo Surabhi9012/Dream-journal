@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Journal</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Auth Forms -->
+        <div id="auth-section">
+            <div class="form-container" id="login-form">
+                <h2>Login</h2>
+                <form onsubmit="handleLogin(event)">
+                    <input type="text" name="username" id="username" placeholder="Username" required>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="#" onclick="toggleForms(event)" class="toggle-form">Register</a></p>
+            </div>
+            
+            <div class="form-container hidden" id="register-form">
+                <h2>Register</h2>
+                <form onsubmit="handleRegister(event)">
+                    <input type="text" id="register-username" name="username" placeholder="Username" required>
+                    <input type="password" id="register-password" name="password" placeholder="Password" required>
+                    <button type="submit">Register</button>
+                </form>
+                <p>Already have an account? <a href="#" onclick="toggleForms(event)" class="toggle-form">Login</a></p>
+            </div>
+        </div>
+        
+        <!-- Rest of your HTML remains the same -->
+        <div id="app-section" class="hidden">
+            <header>
+                <h1>Dream Journal</h1>
+                <button onclick="logout()">Logout</button>
+            </header>
+            
+            <!-- Dream Entry Form -->
+            <!-- Dream Entry Form -->
+             <!-- Dream Entry Form -->
+            <div class="dream-entry">
+                <h2>Log New Dream</h2>
+                <form id="dream-form">
+                    <textarea placeholder="Describe your dream..."></textarea>
+                    <button type="submit" class="save-button">Save Dream</button>
+                </form>
+            </div>
+            
+            <!-- Dreams List -->
+            <div class="dreams-list">
+                <h2>Your Dreams</h2>
+                <div id="dreams-container"></div>
+            </div>
+            
+            <!-- Insights Section -->
+            <div class="insights">
+                <h2>Dream Insights</h2>
+                <div id="mood-trends"></div>
+                <div id="recurring-themes"></div>
+                <div id="feedback"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/main.js"></script>
+</body>
+</html>
