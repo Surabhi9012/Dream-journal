@@ -307,6 +307,7 @@ def refresh_token(current_user):
 if __name__ == '__main__':
     # Ensure static folder exists
     os.makedirs(app.static_folder, exist_ok=True)
-    
-    # Start the app
-    app.run(host='127.0.0.1', port=5000, debug=True)
+
+    # Start the app, bind to the correct host and port
+    port = int(os.environ.get('PORT', 10000))  # Get port from environment variable or default to 10000
+    app.run(host='0.0.0.0', port=port, debug=True)
