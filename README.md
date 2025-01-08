@@ -60,6 +60,7 @@ Example in Dreams: Suppose you have three dreams:
 
 Common words like "I" will have low importance due to high frequency across all entries.
 Unique words like "recurring" or "beautiful" will have higher importance for their respective dreams.
+
 2. KMeans Clustering
 KMeans is an unsupervised machine learning algorithm used to group data points into a predefined number of clusters. Here, it groups dreams into thematic clusters based on their textual features.
 
